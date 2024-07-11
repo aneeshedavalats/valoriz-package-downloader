@@ -43,3 +43,58 @@ To download all the applications required for a manual tester in the Ambient 360
 vpd -p amb -qm -d
 ```
 
+### List Packages for a Developer in a Project
+To list all the applications required for a developer in the GMG project:
+
+```sh
+vpd -l -p amb -dv
+```
+
+### Download Packages for an Automation Tester in a Project
+To download all the applications required for an automation tester in the Magrabi project:
+
+```sh
+vpd -p mgb -qa -d
+```
+
+### Additional Information
+For further assistance, use the help command:
+
+```sh
+vpd -h
+```
+
+For version information:
+
+```sh
+vpd -V
+```
+
+## Running the CLI
+To run the CLI, do a Gradle build:
+
+```sh
+gradle build
+```
+
+In the IDE terminal, enter the following command followed by a `vpd` command. For example, to list all the applications required for the Ambient 360 project:
+
+```sh
+java -jar build/libs/vpd-cli-1.0.jar -l -p amb
+```
+
+### Alternative Method: Using a Batch File
+1. After the Gradle build, copy the jar file from build/libs and paste it into a folder (e.g., ValorizPackageDownloader) outside the build directory.
+
+2. Create a vpd.bat file in that folder and paste the below code:
+```sh
+@echo off
+
+set JAR_PATH=./vpd-cli-1.0.jar
+java -jar "%JAR_PATH%" %*
+```
+
+3. Now open CMD in that location and start running `vpd` commands. For example, to list all the applications required for the Ambient 360 project:
+```sh
+vpd -l -p amb
+```

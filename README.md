@@ -84,7 +84,7 @@ java -jar build/libs/vpd-cli-1.0.jar -l -p amb
 ```
 
 ### Alternative Method: Using a Batch File
-1. After the Gradle build, copy the jar file from build/libs and paste it into a folder (e.g., ValorizPackageDownloader) outside the build directory.
+1. After the Gradle build, copy the jar file from build/libs and paste it into a folder (e.g., ValorizPackageDownloader) in your system.
 
 2. Create a vpd.bat file in that folder and paste the below code:
 ```sh
